@@ -1,0 +1,20 @@
+AGs-Core v3.6 — avisos de terceros y atribuciones
+
+1) app/ags_local/model.py (AGsGPT: CausalSelfAttention, Block, generate con top-k,
+   inicialización normal std=0.02) sigue de cerca el diseño de:
+   - minGPT  — https://github.com/karpathy/minGPT  — Copyright (c) 2020 Andrej Karpathy — MIT License
+   - nanoGPT — https://github.com/karpathy/nanoGPT — Copyright (c) 2022 Andrej Karpathy — MIT License
+   Texto de la licencia MIT de estos proyectos: ver https://github.com/karpathy/nanoGPT/blob/master/LICENSE
+   (debe conservarse el aviso de copyright si se redistribuye código derivado).
+
+2) app/ags_local/model.py (LoRALinear: B=0, A con kaiming_uniform a=sqrt(5), escala alpha/r):
+   - Hu, E. J. et al. "LoRA: Low-Rank Adaptation of Large Language Models", ICLR 2022. arXiv:2106.09685
+   - loralib — https://github.com/microsoft/LoRA — Copyright (c) Microsoft Corporation — MIT License
+
+3) Arquitectura Transformer: Vaswani, A. et al. "Attention Is All You Need", NeurIPS 2017.
+
+4) Dependencias (licencias propias): FastAPI (MIT), Starlette (BSD-3), Uvicorn (BSD-3),
+   httpx (BSD-3), pydantic (MIT), python-dotenv (BSD-3), PyTorch (BSD-3), pytest (MIT).
+   Proveedores LLM vía LiteLLM (MIT): sujetos a sus propios términos de uso.
+
+5) Excluido a propósito: código de plantilla de la plataforma Grok presente en la app
